@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+}
+
+.hero {
+    width: 100%;
+    color: white;
+    display: flex;
+    height: 80vh;
+    background-color: black;
+}
+
+.hero video {
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    filter: brightness(0.4);
+    background-color: white;
+    object-fit: cover;
+}
+
+.hero .content {
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    translate: 128px 0px;
+    justify-content: center;
+    flex-direction: column;
+    width: 30vw;
+}
+
+.hero .content * {
+    text-align: left;
+    margin-top: 0.5rem;
+}
+
+button,
+.button {
+    color: white;
+    text-decoration: none;
+    background-color: blue;
+    border-radius: 2rem;
+    padding: 1rem;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    margin-top: 1.2rem;
+    width: fit-content;
+}
+
+.footer {
+    background-color: black;
+    width: 100vw;
+    height: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: top;
+    padding-top: 4rem;
+}
+
+.footer p {
+    color: white;
+}
+
+.footer a {
+    color: #AAA;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer div {
+    flex-direction: column;
+    gap: 1rem;
+    display: flex;
+    width: 100vw;
+    z-index: 999;
+}
+
+.nav-bar {
+    color: white;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+}
+
+.link-list>* {
+    margin-right: 1.5rem;
+}
+
+.nav-bar .link-list a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+@media (max-width: 900px) {
+    .footer {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        height: auto;
+        flex-direction: column-reverse;
+        gap: 3rem;
+    }
+    .footer div {
+        flex-direction: row;
+    }
+    .hero .content {
+        width: calc(100vw - 1rem);
+        translate: 0px 0px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .hero .content * {
+        text-align: center;
+    }
+    .nav-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-bar>*:first-child {
+        padding-bottom: 2rem;
+    }
+    .link-list>*:last-child {
+        margin-right: none;
+    }
+}
+
+@media (max-height: 800px) {
+    .hero {
+        height: 100vh;
+    }
+}
+
+.image-list {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.image-list img {
+    width: 16rem;
+    height: 100%;
+    margin: 0.4rem;
+}
+
+.image-list img:hover {
+    transform: scale(1.04, 1.04);
+    cursor: pointer;
+}
+
+.div-split {
+    display: flex;
+    width: 100vw;
+}
+
+.div-split>* {
+    width: 50vw;
+}
+
+.div-split * {
+    text-align: left;
+}
+
+.image-follow {
+    display: flex;
+    justify-content: center;
+}
+
+.image-follow img {
+    top: 128px;
+    margin-bottom: 3rem;
+    position: sticky;
+    height: fit-content;
+}
+
+.parallax {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.center-container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.image-content {
+    width: 40%;
+}
+
+@media (max-width: 900px) {
+    .div-split {
+        flex-direction: column;
+    }
+    .div-split>* {
+        width: calc(100% - 16px);
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .image-content {
+        width: 50%;
+    }
+}
