@@ -1,5 +1,7 @@
 ---
 
+import Nav from '../components/nav.astro';
+import Footer from '../components/footer.astro';
 ---
 
 <html lang="en">
@@ -12,34 +14,28 @@
 </head>
 
 <body>
-    <nav class="nav-bar">
-        <div>
-            LOGO HERE
-        </div>
-        <div class="link-list">
-            <a href="#">LINK</a>
-            <a href="#">LINK</a>
-            <a href="#">LINK</a>
-            <a href="#">LINK</a>
-            <a href="#">LINK</a>
-        </div>
-    </nav>
+    <Nav/>
     <header class="hero">
         <video src="videos/result.webm" autoplay loop preload="auto"></video>
         <div class="content">
             <h1>DARK PULSE - Energy Drink</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium nam repellendus molestias, voluptatibus sapiente ratione, architecto, doloribus vero corrupti voluptas nisi culpa. Corrupti libero consectetur perferendis inventore nisi porro
-                consequatur?</p>
+            <p>Descubre la revolución de la energía inteligente con Dark Pulse. Diseñada científicamente para potenciar tu concentración y claridad mental sin una sola gota de azúcar.
+                <br>Olvídate de los bajones de energía y mantén tu mente en modo alfa durante todo el día con su refrescante sabor</p>
             <br><br>
-            <a class="button" href="#">FIND MORE</a>
+            <a class="button" href="product">FIND MORE</a>
         </div>
     </header>
 
     <main>
-        <!-- TODO: put content here-->
         <article>
             <br><br><br>
-            <h1>OPCIONES DISPONIBLES</h1>
+            <div class="quote">
+            <p>Tu nuevo aliado para estudiar, trabajar o entrenar.
+                <br>Dark Pulse siempre estara aqui por ti
+            </p>
+            </div>
+            <br><br><br>
+            <h1>SABORES DISPONIBLES</h1>
             <div class="image-list">
                 <a href="product"><img src="img/can (1).jpg"></a>
                 <a href="product"><img src="img/can (2).jpg"></a>
@@ -49,24 +45,7 @@
         </article>
     </main>
 
-    <footer class="footer">
-        <div>
-            <p>pretend this is the brand image</p>
-            <p>Copyright info here</p>
-        </div>
-        <div>
-            <p>Compañia</p>
-            <a href="#">Empleo</a>
-            <a href="#">Sobre nosostros</a>
-            <a href="#">Marca</a>
-            <a href="#">Politica de privacidad</a>
-        </div>
-        <div>
-            <p>Ayuda</p>
-            <a href="#">Preguntas Frecuentes</a>
-            <a href="#">Contacta con nosotros</a>
-        </div>
-    </footer>
+    <Footer/>
 </body>
 
 </html>
